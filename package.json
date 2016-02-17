@@ -3,5 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "dependencies": {
+    "mysql": "2.10.2",
+    "async": "1.5.2"
   }
 }
