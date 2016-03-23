@@ -8,7 +8,7 @@ var jdbc_options = {
 
 var baseJdbc = require('./baseJdbc')(jdbc_options);
 
-/* baseJdbc.query('SELECT * from clue limit 0,1', function (err, results) {
+ baseJdbc.query('SELECT * from clue limit 0,1', function (err, results) {
  //console.log(err, results);
  });
 
@@ -18,7 +18,7 @@ var baseJdbc = require('./baseJdbc')(jdbc_options);
  values: [0, 2]
  }, function (err, results) {
  console.log(err, results);
- });*/
+ });
 
 /**
  {
