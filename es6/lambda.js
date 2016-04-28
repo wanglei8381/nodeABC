@@ -30,4 +30,10 @@ left3('3');
 
 let right = m => m * 2;
 
+let right1 = m => {
+    console.log('-------------------------------');
+    return m * m;
+}
+
 console.log(right(2));
+console.log(right1(2));
