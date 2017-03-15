@@ -3,7 +3,7 @@ var url = require('url');
 var path = 'http://user:pass@host.com:8080/p/a/t/h?query=string&query2=string2#hash';
 
 var log = function () {
-  console.log.apply(this, arguments);
+    console.log.apply(this, arguments);
 }
 //解析url
 log(url.parse(path));
@@ -13,18 +13,27 @@ log(url.parse(path, true));
 log(url.parse(path, false, true));
 
 path = url.format({
-  protocol: 'http:',
-  hostname: 'www.baidu.com',
-  port: '80',
-  pathname: '/news',
-  query: {page: 1}
+    protocol: 'http:',
+    hostname: 'www.baidu.com',
+    port: '80',
+    pathname: '/news',
+    query: {page: 1},
+    href: 'http://user:pass@host.com:8080/p/a/t/h?query=string&query2=string2#hash'
 });
 
-log(path);
+log('---》', path);
 
 url.resolve('/one/two/three', 'four')         // '/one/two/four'
 url.resolve('http://example.com/', '/one')    // 'http://example.com/one'
 url.resolve('http://example.com/one', '/two') // 'http://example.com/two'
 
 
-log(url.parse('/p/a/t/h?query=string&query2=string2#hash',true));
+log(url.parse('/p/a/t/h?query=string&query2=string2#hash', true));
+
+
+let urlObj = url.parse('http://user:pass@host.com:8080/p/a/t/h?query=string&query2=string2#hash', true);
+console.log('------------');
+urlObj.search = null;
+urlObj.query = {a: 'b'};
+urlObj.pathname = '/app/wap/s'
+console.log(url.format(urlObj));

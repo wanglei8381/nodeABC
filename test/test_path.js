@@ -13,8 +13,8 @@ console.log(path.isAbsolute('qux/'));     // false
 console.log(path.isAbsolute('.'));        // false
 console.log(path.relative('/data/orandea/test/aaa', '/data/orandea/impl/bbb')) //..\..\impl\bbb
 console.log(path.dirname('/foo/bar/baz/asdf/quux')) // /foo/bar/baz/asdf
-console.log(path.dirname('/foo/bar/baz/asdf/quux')) // /foo/bar/baz/asdf
-console.log(path.basename('/foo/bar/baz/asdf/quux')) // quux.html
+console.log(path.dirname('/foo/bar/baz/asdf/quux.js')) // /foo/bar/baz/asdf
+console.log(path.basename('/foo/bar/baz/asdf/quux')) // quux
 console.log(path.basename('/foo/bar/baz/asdf/quux.html','.html')) // quux
 console.log(path.basename('/foo/bar/baz/asdf/quux.html','.htm')) // quux.html
 console.log(path.extname('/foo/bar/baz/asdf/quux.html.htm')) // .htm
