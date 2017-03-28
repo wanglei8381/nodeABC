@@ -32,7 +32,7 @@ console.log(set.has('s'), set.has(2));
 console.log(set.delete(2), set);
 console.log('----------------------------');
 set.forEach((val, key, arr) => {
-    console.log(key, val, arr);
+  console.log(key, val, arr);
 });
 console.log('----------------------------');
 console.log(set.entries());
@@ -40,4 +40,36 @@ console.log(set.keys());
 console.log(set.values());
 
 console.log('----------------------------');
-console.log(set.clear(), set);
+set.clear()
+
+function foo () {
+
+}
+
+let fn = function () {
+
+}
+
+set.add(1).add('1')
+   .add({}).add({})
+   .add(function () {}).add(function () {})
+   .add(foo).add(foo)
+   .add(fn).add(fn)
+   .add(true).add(true).add(true).add(false);
+
+(function () {
+  function foo () {
+
+  }
+
+  set.add(foo)
+})()
+console.log(set);
+set.clear()
+console.log('----------------------------');
+function gogo () {
+  set.add(arguments)
+}
+
+gogo(1, 2, 3)
+console.log(set);
