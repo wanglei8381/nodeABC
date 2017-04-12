@@ -1,6 +1,6 @@
-let Mock = require('mockjs')
+let {mock} = require('mockjs')
 
-let res = Mock.mock({
+let res = mock({
   "string|1-10": "★"
 })
 
