@@ -20,3 +20,5 @@ console.log(path.basename('/foo/bar/baz/asdf/quux.html','.htm')) // quux.html
 console.log(path.extname('/foo/bar/baz/asdf/quux.html.htm')) // .htm
 console.log(path.basename('/foo/bar/baz/asdf/quux.html',path.extname('/foo/bar/baz/asdf/quux.html'))) // htm
 console.log(path.sep)
+
+console.log(path.basename('pages/bar/baz/asdf/quux.wxss', '.wxss'))
